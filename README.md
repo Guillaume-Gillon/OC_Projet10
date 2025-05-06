@@ -8,7 +8,7 @@ Cette application est une API qui permet de :<br>
 > [!NOTE]
 > Testé sous Ubuntu 24.04 - Python 3.12.3 - Navigateur Mozilla Firefox - Postman
 
-## Prérequis
+## ✅ Prérequis
 
 Pour installer ce programme, vous aurez besoin d'une connexion internet. Le programme est ensuite exécuté en local et ne nécessite pas de connexion internet pour fonctionner.<br>
 <br>
@@ -17,10 +17,10 @@ Python doit être installé sur votre ordinateur (version 3.12.3 ou supérieur).
 L'installateur **pip** doit également être disponible sur votre machine pour installer les dépendances.
 Il est possible d'utiliser **pipenv** pour centraliser la gestion des modules, dépendances et environnement virtuel.
 
-## Installation et exécution du programme
+## 📦 Installation et exécution du programme
 
 <details>
-<summary>🛠️ Etape 1 - Installer git</summary><br>
+<summary>📍 Etape 1 - Installer git</summary><br>
 
 Pour télécharger ce programme, vérifiez que git est bien installé sur votre poste.<br>
 Vous pouvez l'installer en suivant les instructions fournies sur le site [git-scm.com](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git)
@@ -28,7 +28,7 @@ Vous pouvez l'installer en suivant les instructions fournies sur le site [git-sc
 </details>
 
 <details>
-<summary>🛠️ Etape 2 - Cloner le dépôt contenant le programme</summary><br>
+<summary>📍 Etape 2 - Cloner le dépôt contenant le programme</summary><br>
 
 
 Placez-vous dans le dossier souhaité et utilisez la commande suivante :
@@ -38,7 +38,7 @@ Placez-vous dans le dossier souhaité et utilisez la commande suivante :
 </details>
 
 <details>
-<summary>🛠️ Etape 3 - Créer et activer un evironnement virtuel</summary>
+<summary>📍 Etape 3 - Créer et activer un evironnement virtuel</summary>
 
 #### Sans pipenv
 Créez un environnement virtuel avec la commande<br>
@@ -55,7 +55,7 @@ Cette commande crée l'environnement virtuel et installe les modules listés dan
 </details>
 
 <details>
-<summary>🛠️ Etape 4 - Installer les dépendances</summary>
+<summary>📍 Etape 4 - Installer les dépendances</summary>
 
 #### Sans pipenv
 Pour que ce programme s'exécute, vous aurez besoin de plusieurs packages additionnels listés dans le fichier requirements.txt.<br>
@@ -69,7 +69,7 @@ L'installation des dépendances a été réalisée à l'étape 3.
 </details>
 
 <details>
-<summary>🛠️ Etape 5 - Lancer un serveur local</summary><br>
+<summary>📍 Etape 5 - Lancer un serveur local</summary><br>
 
 #### Sans pipenv
 Placez vous dans le dossier **SoftDesk_API** puis exécutez la commande <br>
@@ -82,7 +82,7 @@ Placez vous dans le dossier **SoftDesk_API** puis exécutez la commande <br>
 </details>
 
 <details>
-<summary>🛠️ Etape 6 - Ouvrez l'application</summary><br>
+<summary>📍 Etape 6 - Ouvrez l'application</summary><br>
 
 Dans la barre d'adresse de votre navigateur, entrez l'un des endpoints suivants :<br>
 ``http://127.0.0.1:8000/users/``
@@ -99,7 +99,7 @@ Remplacer **ID** par la valeur de l'entrée souhaitée.
 
 </details>
 
-## Fonctionnement du programme
+## ⚙️ Fonctionnement du programme
 
 L'application comporte différentes sections accessibles sur permission :
 - Endpoint USERS : Permissions pour administrateurs uniquement<br>
