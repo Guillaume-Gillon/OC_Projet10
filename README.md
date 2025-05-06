@@ -40,14 +40,14 @@ Placez-vous dans le dossier souhaité et utilisez la commande suivante :
 <details>
 <summary>Etape 3 - Créer et activer un evironnement virtuel</summary><br>
 
-## Sans pipenv
+#### Sans pipenv
 Créez un environnement virtuel avec la commande<br>
 ``python3 -m venv env``<br>
 
 Activez cet environnement avec la commande<br>
 ``source env/bin/activate``
 
-## Avec pipenv
+#### Avec pipenv
 Placez-vous dans le dossier SoftDesk_API et exécutez la commande<br>
 ``pipenv install``
 Cette commande crée l'environnement virtuel et installe les modules listés dans le fichier Pipfile.
@@ -57,13 +57,13 @@ Cette commande crée l'environnement virtuel et installe les modules listés dan
 <details>
 <summary>Etape 4 - Installer les dépendances</summary><br>
 
-## Sans pipenv
+#### Sans pipenv
 Pour que ce programme s'exécute, vous aurez besoin de plusieurs packages additionnels listés dans le fichier requirements.txt.<br>
 
 Exécutez la commande <br>
 ``pip install -r requirements.txt``
 
-## Avec pipenv
+#### Avec pipenv
 L'installation des dépendances a été réalisée à l'étape 3.
 
 </details>
@@ -71,11 +71,11 @@ L'installation des dépendances a été réalisée à l'étape 3.
 <details>
 <summary>Etape 5 - Lancer un serveur local</summary><br>
 
-## Sans pipenv
+#### Sans pipenv
 Placez vous dans le dossier **SoftDesk_API** puis exécutez la commande <br>
 ``python3 manage.py runserver``
 
-## Avec pipenv
+#### Avec pipenv
 Placez vous dans le dossier **SoftDesk_API** puis exécutez la commande <br>
 ``pipenv run python manage.py runserver``
 
