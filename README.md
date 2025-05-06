@@ -126,7 +126,7 @@ L'utilisateur a la possibilité de :
 > - Seul l'utilisateur AdminDatabase a les droits "superuser" <br>
 > - Des projets, tickets et commentaires sont également présents. <br>
 
-## Utilisation de POSTMAN
+## 📤 Utilisation de POSTMAN
 
 Il est possible de générer des JWT dans Postman depuis ``http://127.0.0.1:8000/api/token/``<br>
 Le JWT généré peut être utilisé pour accéder aux différents fonctionnalités de l'API.<br>
