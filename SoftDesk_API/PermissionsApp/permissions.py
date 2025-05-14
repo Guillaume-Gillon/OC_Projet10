@@ -44,7 +44,7 @@ class IsActualUserOrAdmin(BasePermission):
 
 
 # OK
-class IsContributorOrAdmin(BasePermission):
+class IsAuthorOrAdmin(BasePermission):
 
     def has_permission(self, request, view):
         return request.user.is_authenticated
@@ -52,10 +52,8 @@ class IsContributorOrAdmin(BasePermission):
     def has_object_permission(self, request, view, obj):
         if request.user.is_superuser:
             return True
-        if request.user.is_authenticated:
-            return ContributorModel.objects.filter(
-                user=request.user, project=obj
-            ).exists()
+        if request.user.username == obj.author.username:
+            return True
         return False
 
 

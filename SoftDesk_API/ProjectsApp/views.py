@@ -2,7 +2,7 @@ from rest_framework.viewsets import ModelViewSet
 
 from django.contrib.auth import get_user_model
 
-from .models import ProjectsModel, IssuesModel, CommentsModel
+from .models import ProjectsModel, IssuesModel, CommentsModel, ContributorModel
 from .serializers import (
     ProjectSerializer,
     ProjectUpdateSerializer,
@@ -13,7 +13,7 @@ from .serializers import (
 )
 
 from PermissionsApp.permissions import (
-    IsContributorOrAdmin,
+    IsAuthorOrAdmin,
     IsProjectContributorOrAdmin,
     IsIssueFromAuthorizedProjectOrAdmin,
 )
@@ -40,7 +40,7 @@ class ProjectsViewset(ModelViewSet):
     * Modification/Suppression : Utilisateurs authentifiés enregistrés comme contributeurs du projet, Administrateur.
     """
 
-    permission_classes = [IsContributorOrAdmin]
+    permission_classes = [IsAuthorOrAdmin]
 
     def get_view_name(self):
         if self.__class__.__name__ == "ProjectsViewset":
@@ -84,7 +84,9 @@ class IssuesViewset(ModelViewSet):
         return super().get_view_name()
 
     def get_queryset(self):
-        return IssuesModel.objects.all()
+        return IssuesModel.objects.filter(
+            project__contributors_users__user=self.request.user
+        )
 
     def get_serializer_class(self):
         if self.action == "update":
@@ -120,4 +122,6 @@ class CommentsViewset(ModelViewSet):
         return CommentSerializer
 
     def get_queryset(self):
-        return CommentsModel.objects.all()
+        return CommentsModel.objects.filter(
+            issue__project__contributors_users__user=self.request.user
+        )
